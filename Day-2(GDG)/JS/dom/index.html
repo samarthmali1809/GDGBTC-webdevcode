@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App - Plain JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+    <h1>My Todos</h1>
+    <p class="subtitle">Built with plain JavaScript</p>
+
+    <!-- the input box and the button -->
+    <div class="row">
+      <input id="todoInput" class="todo-input" placeholder="What do you have to do?">
+      <button id="addBtn" class="add-btn">Add</button>
+    </div>
+
+    <!-- JavaScript will fill this list. It starts empty. -->
+    <ul id="todoList" class="todo-list"></ul>
+  </div>
+
+  <!-- our JavaScript file. It must be at the BOTTOM,
+       so the HTML above already exists when it runs. -->
+  <script src="app.js"></script>
+
+</body>
+</html>
