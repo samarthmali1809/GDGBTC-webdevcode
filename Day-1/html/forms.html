@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Form Controls</title>
+</head>
+<body>
+   <h1>HTML Forms</h1>
+    <p>This is a simple HTML form example.</p>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <h2>Text Inputs</h2>
+        <label for="name">Name :</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        <br>
+        <label for="email">Email :</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        <br>
+        <label for="password">Password :</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+        <br>
+        <label for="confirm-password">Confirm Password :</label>
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password">
+
+        <h2>Choices</h2>
+        <label for="country">Country :</label>
+        <select id="country" name="country">
+            <option value="">Choose a country</option>
+            <option value="india">India</option>
+            <option value="usa">United States</option>
+            <option value="uk">United Kingdom</option>
+        </select>
+        <br>
+        <span>Gender :</span>
+        <label><input type="radio" name="gender" value="female"> Female</label>
+        <label><input type="radio" name="gender" value="male"> Male</label>
+        <label><input type="radio" name="gender" value="other"> Other</label>
+        <br>
+        <label><input type="checkbox" name="newsletter" value="yes"> Subscribe to the newsletter</label>
+
+        <h2>Other Controls</h2>
+        <label for="message">Message :</label>
+        <textarea id="message" name="message" rows="5" cols="35" placeholder="Write your message"></textarea>
+        <br>
+        <label for="website">Website :</label>
+        <input type="url" id="website" name="website" placeholder="https://example.com">
+        <br>
+        <label for="phone">Phone :</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+        <br>
+        <label for="age">Age :</label>
+        <input type="number" id="age" name="age" min="1" max="120">
+        <br>
+        <label for="color">Favorite color :</label>
+        <input type="color" id="color" name="color" value="#3366cc">
+        <br>
+        <label for="birthday">Birthday :</label>
+        <input type="date" id="birthday" name="birthday">
+        <br>
+        <label for="meeting">Meeting time :</label>
+        <input type="datetime-local" id="meeting" name="meeting">
+        <br>
+        <label for="resume">Upload file :</label>
+        <input type="file" id="resume" name="resume">
+
+        <h2>Buttons</h2>
+        <button type="button">Normal Button</button>
+        <button type="submit">Submit Form</button>
+        <button type="reset">Reset Form</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Fundamentals</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <p class="lesson-label">Lesson 01 · 01:20 – 01:35</p>
+        <h1>CSS Fundamentals</h1>
+        <p>Selectors, colors, and typography — the building blocks of every stylesheet.</p>
+    </header>
+
+
+    <!-- ============================================
+         ELEMENT SELECTOR — styles a tag by name
+         See: h2 { } in style.css
+    ============================================= -->
+    <section>
+        <h2 >1. Element Selectors</h2>
+        <p class="highlight">This paragraph is styled with a <code>p</code> element selector.</p>
+        <p class="muted"> Every <code>&lt;p&gt;</code> on this page shares those base styles.</p>
+    </section>
+
+
+    <!-- ============================================
+         CLASS SELECTOR — reuse styles with .
+         One class can be used on many elements
+    ============================================= -->
+    <section>
+        <h2>2. Class Selectors</h2>
+        <p class="highlight">This paragraph uses <code>class="highlight"</code>.</p>
+        <p class="muted">This one uses <code>class="muted"</code> — same tag, different look.</p>
+    </section>
+
+
+    <!-- ============================================
+         ID SELECTOR — unique, one per page
+         Use # in CSS. Prefer classes for styling.
+    ============================================= -->
+    <section>
+        <h2 class="blue">3. ID Selectors</h2>
+        <p id="special-note">This paragraph has <code>id="special-note"</code>. IDs should be unique.</p>
+    </section>
+
+
+    <!-- ============================================
+         COLORS — named, hex, rgb, hsl
+    ============================================= -->
+    <section>
+        <h2>4. Colors</h2>
+        <div class="swatch-row">
+            <div class="swatch named">Named<br><small>royalblue</small></div>
+            <div class="swatch hex">Hex<br><small>#2563eb</small></div>
+            <div class="swatch rgb">RGB<br><small>rgb(37, 99, 235)</small></div>
+            <div class="swatch hsl">HSL<br><small>hsl(221, 83%, 53%)</small></div>
+        </div>
+    </section>
+
+
+    <!-- ============================================
+         TYPOGRAPHY — font-family, size, weight
+    ============================================= -->
+    <section>
+        <h2>5. Typography</h2>
+        <p class="type-serif">Serif font — traditional, used for long reading.</p>
+        <p class="type-sans">Sans-serif font — clean, used for UI and headings.</p>
+        <p class="type-mono">Monospace font — equal letter width, used for code.</p>
+        <p class="type-large">Large and bold — <code>font-size</code> + <code>font-weight</code>.</p>
+        <p class="type-spaced">Letter-spaced uppercase — <code>letter-spacing</code> + <code>text-transform</code>.</p>
+    </section>
+
+
+    <!-- ============================================
+         COMBINED SELECTORS — descendant, group
+    ============================================= -->
+    <section class="card-demo">
+        <h2>6. Combining Selectors</h2>
+        <p>Only paragraphs <em>inside this card</em> get the card text color.</p>
+        <a href="#">A link inside the card</a>
+    </section>
+
+</body>
+</html>
+
+<!--
+==============================================
+  LESSON: 01:20 – 01:35  CSS Fundamentals
+==============================================
+
+HOW CSS IS ADDED:
+─────────────────
+1. External  <link rel="stylesheet" href="style.css">  ← best practice
+2. Internal  <style> ... </style> inside <head>
+3. Inline    style="color: red;" on an element         ← avoid
+
+SELECTOR TYPES:
+───────────────
+  p            element  — all <p> tags
+  .highlight   class    — any element with that class
+  #special     id       — the one element with that id
+  h2, p        group    — both h2 AND p
+  section p    descendant — p tags inside a section
+
+SPECIFICITY (who wins when rules conflict):
+───────────────────────────────────────────
+  inline  >  id  >  class  >  element
+
+COLOR FORMATS:
+──────────────
+  named   red, royalblue
+  hex     #2563eb
+  rgb     rgb(37, 99, 235)
+  hsl     hsl(221, 83%, 53%)
+
+TYPOGRAPHY PROPERTIES:
+──────────────────────
+  font-family     which font
+  font-size       how big
+  font-weight     how bold (400 / 700)
+  line-height     space between lines
+  text-align      left | center | right
+  letter-spacing  space between letters
+  text-transform  uppercase | lowercase | capitalize
+
+💡 CHALLENGES:
+  1. Add a new class .warning with orange text and a yellow background.
+  2. Change the h1 color using a hex code you pick.
+  3. Style all <code> tags with a light gray background.
+==============================================
+-->

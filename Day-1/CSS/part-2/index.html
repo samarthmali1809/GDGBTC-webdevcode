@@ -1,0 +1,208 @@
+/* ================================================
+   LESSON: CSS Fundamentals (01:20 – 01:35)
+   ================================================
+   CONCEPTS:
+   ✅ Element, class, and ID selectors
+   ✅ Colors (named, hex, rgb, hsl)
+   ✅ Typography (family, size, weight, spacing)
+   ✅ Grouping and descendant selectors
+================================================ */
+
+
+/* ────────────────────────────────────────────
+   RESET — start from a clean slate
+   * is the universal selector (every element)
+──────────────────────────────────────────── */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ────────────────────────────────────────────
+   ELEMENT SELECTORS
+   Written as the tag name: body, h1, p, code
+──────────────────────────────────────────── */
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;  /* fallback list */
+    color: #111827;
+    background: #f8fafc;
+    line-height: 1.6;                            /* 1.6 = 160% of font-size */
+    padding: 40px 24px;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2.25rem;   /* rem = relative to root html font-size (16px) */
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 12px;
+}
+
+p {
+    color: #334155;
+    margin-bottom: 10px;
+}
+
+code {
+    font-family: 'Courier New', monospace;
+    background: #e2e8f0;
+    color: #0f172a;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+section {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+
+/* ────────────────────────────────────────────
+   CLASS SELECTORS
+   Start with a dot. Reusable on many elements.
+──────────────────────────────────────────── */
+
+.page-header {
+    margin-bottom: 32px;
+}
+
+.lesson-label {
+    color: #2563eb;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.highlight {
+    background: #dbeafe;
+    color: #1e40af;
+    padding: 10px 14px;
+    border-radius: 8px;
+}
+
+.muted {
+    color: #64748b;
+}
+
+
+/* ────────────────────────────────────────────
+   ID SELECTOR
+   Start with #. Use once per page.
+   More specific than a class — harder to override.
+──────────────────────────────────────────── */
+
+#special-note {
+    border-left: 4px solid #2563eb;
+    padding: 10px 14px;
+    background: #eff6ff;
+}
+
+
+/* ────────────────────────────────────────────
+   COLORS — four ways to write the same blue
+──────────────────────────────────────────── */
+
+.swatch-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.swatch {
+    flex: 1;
+    min-width: 120px;
+    color: white;
+    text-align: center;
+    padding: 20px 8px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.swatch small {
+    display: block;
+    font-weight: 400;
+    opacity: 0.85;
+    margin-top: 4px;
+}
+
+.named { background: royalblue; }                 /* named color */
+.hex   { background: #2563eb; }                   /* hex */
+.rgb   { background: rgb(37, 99, 235); }          /* rgb */
+.hsl   { background: hsl(221, 83%, 53%); }        /* hsl */
+
+
+/* ────────────────────────────────────────────
+   TYPOGRAPHY
+──────────────────────────────────────────── */
+
+.type-serif {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.1rem;
+}
+
+.type-sans {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.type-mono {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.95rem;
+}
+
+.type-large {
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.type-spaced {
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #2563eb;
+}
+
+
+/* ────────────────────────────────────────────
+   COMBINING SELECTORS
+   .card-demo p  → only p tags inside .card-demo
+──────────────────────────────────────────── */
+
+.card-demo {
+    background: #0f172a;
+}
+
+.card-demo h2 {
+    color: #f8fafc;
+}
+
+.card-demo p {
+    color: #cbd5e1;
+}
+
+.card-demo a {
+    color: #93c5fd;
+}
+
+.card-demo a:hover {          /* :hover is a pseudo-class */
+    color: #ffffff;
+}
